@@ -1,0 +1,62 @@
+Write JavaScript to show the usage of setInterval function using which background color of a
+division keeps on changing to a random color every 2 seconds. Also use setTimeout function to
+show the content of a textbox as label of large size after 3 seconds.
+Code:
+<html>
+<head>
+<script>
+var i=0;
+function sizeincrease()
+{
+var doc=document.getElementById("demo1");
+var size=["40px","50px","60px","70px","80px"];
+doc.style.fontsize=size[i];
+i=(i+1)%size.length;
+}
+function changecolour()
+{
+var doc=document.getElementById("demo1");
+var colour=["blue","purple","acqua","yellow","red","green"];
+doc.style.backgroundColor=colour[i];
+i=(i+1)%colour.length;
+}
+
+function setTochange()
+{
+ document.getElementById("colourButton");
+    setInterval("changecolour()",2000);
+}
+            function settoincrease()
+            {
+                document.getElementById("sizeButton");
+                setTimeout ( "sizeincrease()", 3000 );
+            }
+</script>
+
+<style>
+#demo1
+{
+border:2px solid red;
+background-color:cyan;
+height:250px;
+width:400px;
+color:blue;
+}
+</style>
+</head>
+
+<body>
+<input type="button" name="click" id="colourButton" value="Click me and wait!" onclick="setTochange()"/>
+<input type="button" name="clickMe" id="sizeButton" value="Click me and wait!" onclick="settoincrease()"/>
+<center>
+<h1>Changing the background color of the division after every 2 sec</h1>
+<h2>using Javascript</h2>
+
+<div id="demo1">
+<h1>HELLO EVERYONE<br><br>HOW ARE YOU</h1>
+</div>
+
+</center>
+</body>
+</html>
+

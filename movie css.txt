@@ -1,0 +1,94 @@
+1. Redesign page created in HTML practical 1 movie such that:
+a. All images have a solid red border of 1px width.
+b. All headings should be in dark blue color.
+c. Text of paragraph must be of different font-family than the complete page.
+d. Background color of the page should be aqua.
+Code:
+<html>
+<head>
+<title>first program</title>
+<style type="text/css">
+body{
+background-color:aqua;
+}
+p{
+font-family:Arial;
+}
+
+img{
+border:1px solid red;
+}
+
+h1,h2,h3,h4{
+color:dark blue;
+}
+
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center; font-size:50;"> Bajrangi Bhaijaan </h1>
+
+<p style="color:brown; font-size:20;">Bajrangi Bhaijaan is a 2015 Indian Hindi-language drama film released on 17 july 2015 written and directed by Kabir Khan, based on an original story by 
+screenwriter V. Vijayendra Prasad, and produced by Salman Khan and Rockline Venkatesh. The film stars Salman with Kareena Kapoor Khan,
+Nawazuddin Siddiqui and debutante Harshaali Malhotra.Made on a budget of ₹90 crore (US$14.03 million).It became a huge commercial success. 
+it grossed ₹969 crore ($150 million) worldwide, and is currently the fifth highest-grossing Indian film and second highest-grossing 
+Bollywood film.</p>
+
+<center>
+
+<img src="bajrangibhaijaan1.jpg" style=align:center; height="500"; width="500">
+<img src="bajrangibhaijaan2.jpg" height="500"; width="500"></center>
+
+
+<h2 style="text-align:center; font-size:50;"> Plot of the movie </h2>
+
+<p style="color:brown; font-size:20;">the story of Pawan Kumar Chaturvedi, a devotee of the Hindu deity Hanuman, who embarks on a journey to take a mute six-year-old Pakistani
+Muslim girl Shahida, separated in India from her mother, back to her hometown.On its way back to Pakistan, the train stops for repairs and Shahida gets off to save a lamb while 
+Razia is asleep. The train leaves before Shahida can re-board. Panicked, she boards a freight train, assuming it to be headed in the same direction, but instead goes reverse-path
+and winds up in Kurukshetra. During a celebration there, she meets Pawan Kumar Chaturvedi (Salman Khan), who is affectionately called "Bajrangi" by the locals. He is a devout Hindu
+Brahmin and an ardent devotee of Lord Hanuman. Pawan resides at the home of his father's friend, Dayanand Pandey (Sharat Saxena), where he is engaged to Dayanand's daughter, Rasika
+(Kareena Kapoor). He tries in vain to find out where Shahida lives. He starts calling her "Munni" and brings her home. Dayanand lets her stay, thinking she must be Brahmin. However,
+the family eventually learns that Munni is a Pakistani Muslim when she is seen cheering for the Pakistani cricket team during a match which the whole family was watching. An enraged
+Dayanand orders Pawan to have her sent to Pakistan through the Pakistani High Commission, but offices are closed due to protests. A local travel agent promises to take Munni to Pakistan
+without a passport but instead tries to sell her to a brothel, causing Pawan to become enraged. After rescuing her, he vows to take Munni home on his own despite not having a passport 
+and visa.
+Pawan and Munni are able to enter Pakistan under the border's fences, but shortly later, they are arrested under suspicions of Pawan being an Indian spy. During interrogation, he escapes
+with Munni and meets Chand Nawab (Nawazuddin Siddiqui), a journalist who works for a Pakistani television channel. Nawab has been following Pawan's situation, thinking he is indeed an 
+Indian spy, but discovers that Pawan is a victim of circumstances who is on a noble mission to reunite the mute Munni with her parents. Moved by his story, Nawab joins him in his journey
+to find Munni's parents. They encounter an Islamic religious scholar, Asad, who helps them avoid capture by police and directs the group to Azad Kashmir, after Munni recognises an area
+similar to her hometown in a calendar photo. Meanwhile, Nawab's cameraman, Kamil Yusuf, is arrested by Inspector Aamir Qureshi and Senior Pakistani Police Officer Hamid Khan (Rajesh Sharma)
+when his efforts to escape fail miserably, and they bait him into tracing Nawab's location.
+Nawab documents their journey on video, but his boss refuses to air it, thinking it's a useless story. Nawab uploads the video on YouTube, discovering in the process that Kamil is being
+scapegoated by the police to capture Pawan alive when he notices the team at a shrine. While reviewing the footage, Munni recognises Razia getting off a bus in the background. The trio 
+goes to the bus station and finally identify Sultanpur as Munni's hometown. They board a bus but find that the local officers have put up barricades to identify and catch "the Indian spy".
+Devising a plan to divert police attention, Pawan gets off the bus and runs toward the jungle in full view while Nawab and Munni escape on the other side. Pawan is captured, shot in the 
+arm, and later brutally tortured. Meanwhile, Nawab and Munni reach Sultanpur, where Munni is finally reunited with her parents.
+The videos uploaded by Nawab go viral throughout India and Pakistan, emotionally moving many. A compassionate Hamid realises that Pawan is innocent after his story is verified, and has him
+released, defying his boss's order to keep him in jail. Nawab calls for support at Hamid's behest and thousands of Pakistanis and Indians congregate at Narowal Check Post, where Pawan is to
+return to India. As Pawan crosses the border, Nawab reveals that Munni's real name is Shahida, who, also present in the crowd, runs toward the fence and after some effort, cries out her 
+first word "Pawan” to get his attention. Pawan hears her voice, and the two run toward each other as they have a reunion with Pawan tossing Shahida high in the air.
+
+<h3 style="text-align:center;font-size:50;">Cast of the Movie</h3>
+<ul>
+<li style="color:blue; font-size:20;">Salman Khan</li><br>
+<img src="salmankhan.jpg" height=400; width=400><br>
+<li style="color:blue; font-size:20;">kareena kapoor</li><br>
+<img src="kareenakapoor.jpg" border:1px solid red; height=500; width=400><br>
+<li style="color:blue; font-size:20;">Harshali Malhotra</li><br>
+<img src="harshali.jfif"  border:1px solid red; height=500; width=400><br>
+<li style="color:blue; font-size:20;">Nawazuddin Siddique</li><br>
+<img src="nawaz.jfif"  border:1px solid red; height=400; width=400><br>
+</ul>
+
+<h4 style="text-align:center; font-size:50;">Similar Movies</h4>
+
+<ol>
+<li><a href ="https://en.wikipedia.org/wiki/Tubelight_(2017_Hindi_film)">Tubelight</a></li>
+<li><a href ="https://en.wikipedia.org/wiki/Secret_Superstar">Secret Superstar</li>
+<li><a href ="https://en.wikipedia.org/wiki/Sultan_(2016_film)">Sultan</li>
+</ol>
+</body>
+</html>
+
+

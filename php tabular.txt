@@ -1,0 +1,55 @@
+6. Write PHP code in a file named db.php which fetches the data from student_details table and
+displays the data in tabular way.
+Code:
+<html>
+<head>
+<style>
+table
+{
+border-style:solid;
+border-width:2px;
+border-color:pink;
+}
+</style>
+</head>
+<body bgcolor="#EEFDEF">
+<?php
+$connection = mysqli_connect('localhost', 'root', '');
+if (!$connection){
+die("Database Connection Failed" .
+mysqli_error($connection));
+}
+$select_db = mysqli_select_db($connection, 'report');
+if (!$select_db){
+die("Database Selection Failed" .
+mysqli_error($connection));
+}
+$result = $connection-> query("SELECT * FROM
+report"); echo "<table border='1'>
+<tr>
+<th>Id</th>
+<th>name</th>
+<th>email</th>
+<th>address</th>
+<th>age</th>
+<th>gender</th>
+<th>society</th>
+<th>course</th>
+</tr>";
+if ($result->num_rows > 0)
+{
+while($row = $result->fetch_assoc()) { echo "<tr>";
+echo "<td>" . $row['roll'] . "</td>";
+echo "<td>" . $row['name'] . "</td>";
+echo "<td>" . $row['email'] . "</td>";
+echo "<td>" . $row['address'] . "</td>";
+echo "<td>" . $row['age'] . "</td>";
+echo "<td>" . $row['gender'] . "</td>";
+echo "<td>" . $row['society'] . "</td>";
+echo "<td>" . $row['course'] . "</td>"; echo "</tr>";
+}
+}
+echo "</table>";
+?>
+</body>
+</html>

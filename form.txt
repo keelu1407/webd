@@ -1,0 +1,83 @@
+3. Create an HTML Page showing the form asking information in following format:
+a. Name of the student as text.
+b. Roll no. of the student as text.
+c. Email of the student as text.
+d. Age of the student as number.
+e. Gender of the student using radio buttons.
+f. Societies he/she opted for using check boxes.
+g. Name of the course from a drop down list.
+h. Address of the student in a text area.
+i. Photo as file.
+j. Submit button to submit this data to report.php page using get method.
+
+Code:
+<html>
+<head>
+<title> form </title>
+</head>
+<body>
+
+<form action = "report.php" method="get">
+<fieldset>
+
+<legend>Personal Details</legend>
+Name:  <input type ="text" name="uname" id=u_name size="15" maxlength:"30"><br><br>
+Roll no.:  <input type ="text" name="roll_n" id=roll size="15" maxlength:"30"><br><br>
+Email:  <input type ="text" name="email" id=email size="15" maxlength:"30"><br><br>
+Age:  <input type ="number" name="age" id=age size="15" maxlength:"30"><br><br>
+
+
+Gender:<br>
+<input type ="radio" name="gender" value="male">Male<br/>
+<input type ="radio" name="gender" value="female">Female<br/>
+<input type ="radio" name="gender" value="other">other<br/><br>
+
+
+Societies:<br>
+<input type ="checkbox" name="music" value="music">music<br/>
+<input type ="checkbox" name="Dance" value="Dance">Dance<br/>
+<input type ="checkbox" name="painting" value="paint">paint<br/>
+<input type ="checkbox" name="Debate" value="Debate">debate<br/>
+<input type ="checkbox" name="streetplay" value="streetplay">streetplay<br/>
+<input type ="checkbox" name="art and craft" value="art and craft">art and craft<br/><br>
+
+Courses:<br>
+
+<select name= "dropdown"><br/>
+<option value="B.A.(hons) History">B.A.(hons) History</option><br/>
+<option value="B.A.(hons) Political Science">B.A.(hons) Political science</option><br/>
+<option value="B.A.(hons) Economics">B.A.(hons) Economics</option><br/>
+<option value="B.A.(hons) English">B.A.(hons) English</option><br/>
+<option value="B.A.Programme (English+History)">B.A.Programme (English+History)</option><br/>
+<option value="B.A.Programme (English+Political Science)">B.A.Programme (English+political science)</option><br/>
+<option value="B.A.Programme (English+Mathematics)">B.A.Programme (English+Mathematics)</option><br/>
+<option value="B.A.Programme (English+Economics)">B.A.Programme (English+Economics)</option><br/>
+<option value="B.A.Programme (English+Philosophy)">B.A.Programme (English+Philosophy)</option><br/>
+<option value="B.A.Programme (Economics+Mathematics)">B.A.Programme (Economics+Mathematics)</option><br/>
+<option value="B.A.Programme (Economics+History)">B.A.Programme (Economics+History)</option><br/>
+<option value="B.Sc.(hons) Mathematics">B.Sc.(hons) Mathematics</option><br/>
+<option value="B.Sc.(hons) Physics">B.Sc.(hons) Physics</option><br/>
+<option value="B.Sc.(hons) Chemistry">B.Sc.(hons) Chemistry</option><br/>
+<option value="B.Sc.(hons) Biology">B.Sc.(hons) Biology</option><br/>
+<option value="B.Sc.(hons) Botony">B.Sc.(hons) Botony</option><br/>
+<option value="B.Sc.(hons) Zoology">B.Sc.(hons) Zoology</option><br/>
+<option value="B.Sc.(hons) Computer Science">B.Sc.(hons) Computer Science</option><br/>
+<option value="B.Com (hons)">B.Com (hons)</option><br/>
+
+</select><br><br>
+
+Address:<br>
+<textarea name="textarea" cols="60" rows="5"></textarea><br><br>
+
+<input type="file" id="myfile" name="filename"><br><br>
+
+<input type ="submit" value="submit"<br><br>
+</fieldset>
+</form> 
+</body>
+</html>
+
+
+
+
+

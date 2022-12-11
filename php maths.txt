@@ -1,0 +1,68 @@
+2. Accept a number from an HTML page and send it to a PHP file. Validate that this number is a
+positive integer in the range 2-100. PHP file should check whether this number is prime or
+composite. If number is found prime then Fibonacci series till that element is also printed
+otherwise factorial of that number is to be printed.
+Code:
+<html>
+<head>
+<title>PHP Q2</title>
+</head>
+<body>
+<form method='POST'>
+<h2>Enter a number: </h2>
+<input type="text" name="name">
+<input type="submit" value="Submit Number">
+</form>
+<?php
+//Retrieve name from query string and store to a local variable
+$name = $_POST['name'];
+echo "<h3>Number: $name</h3>";
+function primeCheck($name){
+if ($name == 1)
+return 0;
+for ($i = 2; $i <= $name/2; $i++)
+{ if ($name % $i ==0)
+return 0;
+}
+return 1;
+}
+function printFibonacci($name)
+{
+$first = 0;
+$second = 1;
+echo "Fibonacci Series \n";
+echo $first.' '.$second.' ';
+for($i = 2; $i < $name; $i++){
+$third = $first + $second;
+echo $third.' ';
+$first = $second;
+$second = $third;
+}
+}
+function Factorial($name){
+$factorial = 1;
+for ($i = 1; $i <= $name; $i++){
+$factorial = $factorial * $i;
+}
+return $factorial;
+}
+if(($name >1) && ($name < 200)){
+$flag = primeCheck($name);
+if ($flag == 1){
+echo "Prime", "<br>";
+printFibonacci($name);
+}
+else
+{
+echo “Not Prime”,”<br>”’
+$fact=Factorial($name);
+echo “Factorial=$fact”;
+}
+}
+else{
+Echo “Enter valid Number”;
+}
+?>
+</body>
+</html>
+

@@ -1,0 +1,140 @@
+2. Redesign page created in HTML practical 2 such that:
+a. All divisions have a solid border of 2px.
+b. Header and Footer division have aquamarine and dark blue background color
+respectively and same font-style which are larger than all other divisions.
+c. Background color of the Navigation division should be aqua and links of the pages
+should appear in UPPERCASE.
+d. Background color of the message and notices division should be light sky blue and text
+color should not be black. Message text should be italic and notices should be bold.
+Code:
+<html>
+<head>
+<title>My College</title>
+<style>
+.logo{
+border:2px solid ;
+background-color:aquamarine;
+}
+.info{
+border:2px solid ;
+background-color:dark blue;
+}
+.nav{
+border:2px solid ;
+background-color:aqua;
+}
+.gallery{
+border:2px solid ;
+}
+.msg{
+border:2px solid ;
+background-color:light sky blue;
+}
+
+</style>
+
+</head>
+<body>
+<div class="logo">
+<hr>
+<center>
+<img src="logo.svg"><hr>
+</div>
+
+<div class="nav">
+<hr>
+<center>
+<a href="https://www.kalindicollege.in/">HOME</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://www.kalindicollege.in/college-profile/">ABOUT COLLEGE</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://www.kalindicollege.in/undergraduate/">COURSES AVAILABLE</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://www.kalindicollege.in/library/">LIBRARY</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://www.kalindicollege.in/time-table/">TIMETABLE</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://www.kalindicollege.in/societies/">NCC/NSS</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href="https://www.kalindicollege.in/help-desk/">HELP DESK</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+<hr>
+</div>
+
+
+<div class="msg">
+<table>
+<tr>
+<th>Message<br>
+
+<img src="principalphoto.jpg" height=400; width=400><br>
+<br>
+<p style="color:blue;"><i>Dear Students! Welcome to Kalindi College. Kalindi College, an institution of academic excellence and achievement, was established in 1967. It is amongst one of the finest colleges within the University of Delhi. At Kalindi College, we are imparting higher education to young women in India, which is a very substantial, potent and conscientious task. We all know that Women are a great human resource and the role of women in the society is critical for development of a nation. To empower women is to increase their control over the decisions that affect their lives both within and outside the household. Through their empowerment women gain greater share of control over resources and it gives them the power of decision making in the home, community, society and nation. I am extremely proud of being a woman.
+
+I want that our students should be imparted an all round education so that they become multidimensional rather than uni-dimensional. In my view, acquiring information is no longer the main focus of education; instead the main aim of education is to build the powers of human mind and spirit. We believe in providing our students an environment, rich in knowledge and supportive for their extra curricular interests.
+
+We aim to evaluate our students on the basis of their physical, mental, social, emotional and intellectual development. It is wonderful to look back at the last few years, at Kalindi College, when there is so much to feel proud of and so much to celebrate. Last few years have been extremely successful and satisfying in terms of accomplishments and accolades in scholastic, co-scholastic and infrastructural development areas. In Antardhvani-2013, Kalindi College won second prize of Rupees 7 Lakhs as “University Award of Good Practices”. On the year, 2014 college has won third prize of Rupees 5 Lakhs as “University Award of Good Practices” in Antardhvani-2015, a 3-day long academic–cum-cultural festival organized by University of Delhi. The phenomenal academic achievements of our students have always added glory to the college by securing high University Ranks. The college has a tradition of excelling in Sports and extracurricular activities, in which our students continue to bring us laurels at the university, zonal and national levels year after year. The success of Kalindi College in all spheres is the combined product of all our little efforts.
+
+I feel proud to acknowledge the contribution of highly qualified, dynamic and multi- talented faculty, non teaching staff and my students for this. We have to continue to move ahead for producing and maintaining the best. We run sixteen departmental societies and twenty nine Programmes / Committees which endeavor to enrich the academic and extra- curricular standards of our students. Our teachers work hard throughout the year with the students to provide them high quality educational experience in the form of debates, group discussions, workshops, symposia, seminars and cultural competitions. Eminent personalities are invited from all walks of life to address our students and expose them to new ideas and thoughts. I strongly believe that- “All odds, all challenges and all handicaps of life can be overcome with strong determination, persistent hard work, insurmountable patience and unshakeable tenacity.”
+
+My best wishes to all the students of Kalindi College.</i>
+
+Prof. Anula Maurya
+Principal
+</tr>
+</th><hr></p>
+
+<tr>
+<td></td>
+<ul>
+<td><a href="https://www.kalindicollege.in/notice/">NOTICES</a><br>
+<b style="color:blue;">
+<li>Lecture on "Women in Sports"</li>
+<li>Notice for Budget Estimate , Allocation and Expenditure Committee</li>	
+<li>Notice for Flag Hosting Ceremony</li>	
+<li>Invigilation Duty for 8 August 2022</li>
+<li>Notice regarding Online classes on 08.08.2022</li>	
+<li>Notification regarding implementation of NEP-2020</li><b>
+<hr></ul></td></tr></table>
+</div>
+	
+<div class="gallery">
+<center>
+<hr><h2>past events and building of college</h2>
+
+<img src="event1.jpg"height=400 width=400>
+<img src="event2.jpg"height=400 width=400>
+<img src="event3.png"height=400 width=400>
+
+<br>
+<img src="pic1.jpg"><hr>
+<img src="pic2.jpg"><hr>
+<img src="pic3.png"><hr>
+<img src="pic4.png"><hr>
+</div>
+
+<div class="info">
+<center>
+<p>info about how to contact
+<br><br><br>
+Ms Karnika Gaur
+
+Librarian & Public Information Officer,
+Kalindi College,
+University of Delhi,
+East Patel Nagar, New Delhi-110008
+Phone : 011-25787604
+E-mail : kalindisampark@kalindi.du.ac.in
+<br><br><br>
+Prof. Anula Maurya
+
+Principal & First Appellate Authority
+Kalindi College,
+University of Delhi,
+East Patel Nagar, New Delhi-110008
+Phone : 011-25787604
+E-mail : kalindisampark@kalindi.du.ac.in<br><br><br>
+Ms. Bhawna Munjal
+
+SPA & APIO
+Kalindi College,
+University of Delhi,
+East Patel Nagar, New Delhi-110008
+Phone : 011-25787604
+E-mail : kalindisampark@kalindi.du.ac.in
+<hr>
+</div>
+</html>

@@ -1,0 +1,21 @@
+3. Write a PHP file colors.php which declares an array of ten colors names. Every time this file is
+accessed a random color from this array should be chosen and same is to be set as the background
+color of a division.
+Code:
+<html>
+<head>
+<title>PHP Q3</title>
+</head>
+<body>
+<?php
+$colors = ['Aqua', 'DarkRed', 'DarkGrey',
+'MediumPurple', 'DarkMagenta', 'DarkOrange',
+'Fuchsia', 'OliveDrab', 'Peru', 'Yellow'];
+$random_key = array_rand($colors,1);
+?>
+<div style="background-color:<?php echo
+$colors[$random_key] ?>;"> PHP Practical Q3
+</div>
+</body>
+</html>
+

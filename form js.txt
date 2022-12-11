@@ -1,0 +1,81 @@
+1. Write JavaScript to validate the form created by student in HTML practical form keeping in mind
+following constraints:
+a. No text box or text area should be left blank.
+b. Validate whether the Roll no. and Email of the student are in proper format.
+c. Age must be in the range 16-22.
+d. Photo must be a file of type jpg/jpeg/png.
+e. Data will be sent to report.php page only if all these constraints are fulfilled otherwise
+display corresponding errors.
+Code:
+<html>
+<head>
+<script>
+function validate(){
+let inputs=document.querySelectorAll("input");
+const gen=[],soc=[];
+let temp=0; temp1=0;
+for(let i=0;i<inputs.length;i++)
+{
+if(inputs[i].value=="")
+{
+alert("please fill all fields.");
+return false;
+}
+if(inputs[i].type=="radio")
+gen[temp++]=inputs[i];
+if(inputs[i].type=="checkbox")
+soc[temp++]=inputs[i];
+}
+if(gen[0].checked||gen[1].checked||gen[2].checked)
+{
+if(soc[0].checked||soc[1].checked||soc[2].checked||soc[3].checked||soc[4].checked||soc[5].checked)
+{
+let roll=document.getElementById('roll').value;
+if(roll.length!=4)
+{
+alert("enter valid Roll no. of 4 digits");
+return false;
+}
+let email=document.getElementById('email').value;
+let temp_email=email.split("@");
+if(temp_email.length!=2)
+{
+alert("enter valid email id");
+return false;
+}
+let age=document.getElementById('age').value;
+if(age<16||age>22)
+{
+alert("enter valid age between 16-22");
+return false;
+}
+let photo=document.getElementById('photo').value;
+let ext=photo.split(".");
+ext=ext[ext.length-1];
+if(ext=="jpg"||ext=="jpeg"||ext="png")
+{
+alert("all entries valid");
+return true;
+}
+else{
+alert("upload valid image type i.e jpg/jpeg/png");
+return false;
+}
+}
+else{
+alert("select atleast one society");
+return false;
+}
+}
+else{
+alert("select gender");
+return false;
+}
+}
+</script>
+
+</head>
+<body>
+<h1 style="text-align: center;">REGISTRATION FORM</h1>
+<form action = "report.php" onsubmit="return validate()" method="get">
+<fieldset>

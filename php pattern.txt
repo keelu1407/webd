@@ -1,0 +1,64 @@
+1. Write PHP script to construct the following pattern using nested for loop.
+* * * * * * *
+* * *    * * *
+* *          * *
+*                *
+* *          * *
+* * *    * * *
+* * * * * * *
+Code:
+<?php
+$n = 4;
+$i; $j; $space;
+/* Printing stars for upper & lower section.
+Upper Half: 2 lower triangular 2D arrays with
+empty space in between them. Lower Half: 2 upper
+triangular 2D arrays with empty space in between
+them.
+*/
+// Upper Half
+for($i = 0; $i < $n; $i++)
+{
+// Left Part
+for($j = 1; $j <= $n -$i; $j++)
+{
+echo "* ";
+}
+for($space = 0; $space < $i; $space++)
+{
+echo "&nbsp;&nbsp;&nbsp;";
+}
+// Right Part
+for($space = 0; $space < $i; $space++)
+{
+echo "&nbsp;&nbsp;&nbsp;";
+}
+for($j = $n - $i; $j >= 1; $j--)
+{
+echo "* ";
+}
+echo '<br>';
+}
+// Lower Half
+for ($i = 2; $i <= $n; $i++)
+{
+// Left Part
+for($j = 1; $j <= $i; $j++)
+{
+echo "* ";
+}
+for($space = 0; $space < $n - $i; $space++)
+{
+echo "&nbsp;&nbsp;&nbsp;";
+}
+// Right Part
+for($space = 1; $space <= $n - $i; $space++)
+{
+echo "&nbsp;&nbsp;&nbsp;";
+}
+for($j = 1; $j <= $i; $j++){
+echo "* ";
+}
+echo '<br>';	
+}
+?>

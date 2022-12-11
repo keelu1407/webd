@@ -1,0 +1,116 @@
+5. Create a table student_details in MySql which is capable of storing the information which is
+being passed in HTML practical 3. Write PHP code in a file named report.php which validates all
+the data and then stores it in table and displays the same. After insertion of the entries in the
+database, an alert box should be displayed stating whether the insertion was successful or not.
+Code:
+<html>
+<head>
+<title>Page Title</title>
+<link rel='stylesheet' type='text/css' media='screen'
+href='main.css'>
+<script src='main.js'></script>
+</head>
+<body>
+<form id="form" method="post">
+<label for="name">NAME:</label>
+<input type="text" class="name" id="name"
+name="name"><br>
+<label for="roll">ROLL NO:</label>
+<input type="text" class="roll" id="roll"
+name="roll"><br>
+<label for="email">EMAIL:</label>
+<input type="email" class="email" id="email"
+name="email"><br>
+<label for="age" >AGE:</label>
+<input type="text" class="age" id="age"
+name="age"><br>
+<p>GENDER:</p>
+<input type="radio" name="gender" id="male"
+value="male">
+<label for="male">Male</label>
+<input type="radio" name="gender" id="female"
+value="female">
+<label for="female">Female</label>
+<input type="radio" name="gender" id="other"
+value="other">
+<label for="other">Other</label><br>
+<p>SOCIETIES:</p>
+<input type="checkbox" id="educational"
+name="society" value="Bike">
+<label for="educational"> educational</label>
+<input type="checkbox" id="dramatic"
+name="society" value="Car">
+<label for="dramatic"> dramatic</label>
+<input type="checkbox" id="yoga" name="society"
+value="Boat">
+<label for="yoga"> yoga</label><br><br>
+<label for="courses">Select courses</label>
+<select id="courses" name="courses">
+<option>COURSES</option>
+<option>Computer Science</option>
+<option>B.A.</option>
+<option>B.Com</option>
+<option>L.L.B</option>
+</select>
+<br>
+<br>
+<label for="address">address</label>
+<textarea rows="2" cols="10" id="address"
+name="address"></textarea>
+<br>
+<br>
+<input type="submit" value="Submit"
+name="submit">
+</form>
+<?php
+$connection = mysqli_connect('localhost', 'root', '');
+if (!$connection){
+die("Database Connection Failed" .
+mysqli_error($connection));
+}
+$select_db = mysqli_select_db($connection, 'report');
+if (!$select_db){
+die("Database Selection Failed" .
+mysqli_error($connection));
+}
+if(isset($_POST['name']) && isset($_POST['roll']) &&
+isset($_POST['email']) && isset($_POST['age']) &&
+isset($_POST['gender']) && isset($_POST['courses'])
+&& isset($_POST['society']) &&
+isset($_POST['address'])){
+$name= $_POST['name'];
+$roll= $_POST['roll'];
+$email= $_POST['email'];
+$age= $_POST['age'];
+$gender= $_POST['gender'];
+$courses= $_POST['courses'];
+$society= $_POST['society'];
+$address= $_POST['address'];
+$count=1;
+/*filename = $_FILES['file']['name'];
+$tmpname = $_FILES['file']['tmp_name'];
+$filesize = $_FILES['file']['size'];
+$filetype = $_FILES['file']['type'];
+$fp = fopen($tmpname, 'r');
+$file = fread($fp, filesize($tmpname));
+$file = addslashes($file); fclose($fp);
+if(!get_magic_quotes_gpc()) {
+$filename = addslashes($filename);}*/
+$query = " INSERT INTO `report`
+(name, roll, email, age, gender, course, society,
+address) VALUES
+('$name', '$roll', '$email', '$age', '$gender', '$courses',
+'$society',
+'$address' )";
+if ($count == 1){
+echo "<script type='text/javascript'>alert('Data
+submitted successfully')</script>";
+}
+else{
+echo "<script type='text/javascript'>alert('Data Not
+Submitted successfully')</script>";
+}
+}?>
+</body>
+</html>
+
